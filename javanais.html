@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traducteur Javanais</title>
+    <link rel="stylesheet" href="javanais.css">
+</head>
+<body>
+<div class="_body">
+    <div class="_form">
+        <div class="_lang">
+            <select id="selectLang">
+                <option value="Francais">Francais</option>
+                <option value="Javanais">Javanais</option>
+            </select>
+        </div>
+        <div class="_form">
+            <textarea rows="3" placeholder="Ecrire ici..." id="enterText"></textarea>
+            <textarea rows="3" placeholder="texte resultat..." id="resultText" disabled></textarea>
+        </div>
+        <div class="_button">
+            <button onclick="traduction()">Traduire</button>
+        </div>
+    </div>
+</div>
+</div>
+<script src="javanais.js"></script>
+<script>
+    var targetLang = document.getElementById('selectLang');
+    var inputStr = document.getElementById('enterText');
+    var outputStr = document.getElementById('resultText');
+
+    function traduction() {
+        if (inputStr.value !== '' || inputStr.value !== undefined || inputStr.value !== null) {
+            if (targetLang.value === 'Francais')
+                outputStr.value = javanais.frTojav(inputStr.value);
+            else
+                outputStr.value = javanais.javToFr(inputStr.value);
+        }
+    }
+</script>
+</body>
+</html>

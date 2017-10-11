@@ -1,0 +1,14 @@
+._body {
+    display: flex;
+    justify-content: center;
+}
+
+._lang {
+    padding-top: 10px;
+	padding-bottom: 10px;
+    padding-left: 125px;
+}
+._button {
+    padding-top: 10px;
+    padding-left: 130px;
+}
